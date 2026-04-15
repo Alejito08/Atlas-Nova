@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Imagen -->
+    <link rel="shortcut icon" href="/imagenes/atlas_nova_logo.png" type="image/x-icon">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/formulario_tour.css">
+
+    <title>Formulario Tours | Tu Próximo Destino</title>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="/imagenes/atlas_nova_logo.png" alt="logo">
+            <h2>Atlas Nova</h2>
+        </div>
+
+        <ul class="links">
+            <h4><strong>Viajes que marcan historia</strong></h4>
+            <br>
+            <h4>Planea Tu Viaje</h4>
+
+            <li>
+                <span><i class="fa-solid fa-plane"></i></span>
+                <a href="/html/vuelos.html">Comprar Vuelos</a>
+            </li>
+
+            <li>
+                <span><i class="fa-solid fa-hotel"></i></span>
+                <a href="/html/hotel.html">Reservar Hotel</a>
+            </li>
+
+            <li>
+                <span><i class="fa-solid fa-map-pin"></i></span>
+                <a href="/html/tour.html">Comprar Tours</a>
+            </li>
+
+        </ul>
+    </aside>
+
+    <header>
+        <nav>
+            <a href="/html/index.html">🏠Inicio</a>
+            <a href="/html/destinos.html">🌍Destinos</a>
+            <a href="/html/contacto.html">📩Contacto</a>
+            <a href="/html/ayuda.html">🖐️Ayuda</a>
+        </nav>
+
+        <h1>Destinos Turisticos</h1>
+    </header>
+
+    <section class="hero">
+        <h1>Tours y Experiencias Inolvidables</h1>
+        <br>
+        <p>
+            Descubre destinos increíbles a través de tours diseñados para brindarte experiencias únicas.
+            Explora lugares emblemáticos, conoce nuevas culturas y vive aventuras guiadas por expertos.
+            Cada recorrido está pensado para que disfrutes al máximo cada momento de tu viaje. 🧭✨
+        </p>
+    </section>
+
+    <div class="formulario-tour">
+
+        <section class="formulario">
+            <br>
+            <h2>Formulario de Reserva de Tour</h2>
+            <hr>
+            <br>
+            <form>
+                <div>
+                    <i class="fa-solid fa-plane-arrival"></i>
+                    <label for="destino-tour">Destino:</label>
+                    <select class="boton-op" id="destino-tour" name="destino-tour" required>
+                        <option value="">Seleccione destino</option>
+                        <option value="francia">Francia</option>
+                        <option value="inglaterra">Inglaterra</option>
+                        <option value="suiza">Suiza</option>
+                        <option value="italia">Italia</option>
+                        <option value="brasil">Brasil</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <i class="fa-solid fa-ticket"></i>
+                    <label for="tipo-tour">Tipo de Tour:</label>
+                    <select class="boton-op" id="tipo-tour" name="tipo-tour" required>
+                        <option value="">Seleccione tipo</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="gastronomico">Gastronómico</option>
+                        <option value="romantico">Romántico</option>
+                        <option value="familiar">Familiar</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <i class="fa-regular fa-calendar"></i>
+                    <label for="fecha-salida">Fecha de Salida:</label>
+                    <input type="date" id="fecha-salida" name="fecha-salida" required>
+                </div>
+                <br>
+                <div>
+                    <i class="fa-regular fa-calendar"></i>
+                    <label for="fecha-regreso">Fecha de Regreso:</label>
+                    <input type="date" id="fecha-regreso" name="fecha-regreso" required>
+                </div>
+                <br>
+                <div>
+                    <i class="fa-solid fa-user-group"></i>
+                    <label for="pasajeros">Número de Pasajeros:</label>
+                    <input type="number" id="pasajeros" name="pasajeros" min="1" value="1" required>
+                </div>
+                <br><br>
+                <h2>Información del ususrio</h2>
+                <hr>
+                <div>
+                    <label for="nombre-completo">Nombre Completo:</label>
+                    <input type="text" id="nombre-completo" name="nombre-completo" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email-reserva">Correo Electrónico:</label>
+                    <input type="email" id="email-reserva" name="email-reserva" required>
+                </div>
+                <br>
+                <div>
+                    <label for="telefono-reserva">Teléfono:</label>
+                    <input type="tel" id="telefono-reserva" name="telefono-reserva" required>
+                </div>
+                <br>
+                <div>
+                    <label for="pasaporte">Número de Pasaporte:</label>
+                    <input type="text" id="pasaporte" name="pasaporte" required>
+                </div>
+                <br>
+                <div>
+                    <label for="comentarios">Comentarios o Requerimientos Especiales:</label>
+                    <textarea id="comentarios" name="comentarios"
+                        placeholder="Indique preferencias dietéticas, necesidades especiales, etc."></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn">Confirmar Reserva</button>
+            </form>
+        </section>
+    </div>
+
+
+    <footer>
+        <div class="icons">
+            <a href="#"><i class="fa-brands fa-instagram fa-bounce"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook fa-bounce"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter fa-bounce"></i></a>
+        </div>
+        <p>© 2026 Tu Próximo Destino</p>
+    </footer>
+
+</body>
+
+</html>

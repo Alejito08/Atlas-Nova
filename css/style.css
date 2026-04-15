@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #a2c9f3, #3A86FF, #a2c9f3);
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: absolute;
+    left: 0;
+    /* Para poder pasar de lado (cambiar los margin ) */
+    top: 0;
+    width: 70px;
+    height: 30%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.277);
+    backdrop-filter: blur(15px);
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar:hover {
+    width: 220px;
+    height: 45%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    width: 45px;
+    border-radius: 0;
+}
+
+.logo h2 {
+    margin-left: 10px;
+    display: none;
+}
+
+.sidebar:hover .logo h2 {
+    display: block;
+}
+
+li i {
+    color: white;
+}
+
+.links li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.links li:hover {
+    background-color: #a1d0ff;
+}
+
+.links li span {
+    min-width: 40px;
+    text-align: center;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: none;
+}
+
+.sidebar:hover .links li a {
+    display: block;
+}
+
+.links h4 {
+    display: none;
+    margin: 10px;
+}
+
+.sidebar:hover .links h4 {
+    display: block;
+}
+
+
+/* CONTENIDO */
+#container {
+    margin-left: 110px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.sidebar:hover~#container {
+    margin-left: 260px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    animation: carrusel 20s infinite;
+}
+
+/* animacion */
+@keyframes carrusel {
+
+    0% {
+        background-image: url("https://cdn.assets-casacor.tec.br/file/casacor-images-news/2025/04/samuel-beer-OkW4Ols6JbU-unsplash.webp");
+    }
+
+    25% {
+        background-image: url("https://www.surfingtheplanet.com/wp-content/uploads/2017/08/puente-tower-bridge-londres.jpg");
+    }
+
+    50% {
+        background-image: url("https://imagenes2.eltiempo.com/files/image_1200_535/uploads/2023/08/10/64d569929115d.jpeg");
+    }
+
+    75% {
+        background-image: url("https://thumbs.dreamstime.com/b/el-matterhorn-en-zermatt-suiza-tren-alpino-de-hasta-gornergrat-verano-swiss-alps-187175724.jpg");
+    }
+
+    100% {
+        background-image: url("https://thumbs.dreamstime.com/b/el-matterhorn-en-zermatt-suiza-tren-alpino-de-hasta-gornergrat-verano-swiss-alps-187175724.jpg");
+    }
+}
+
+.contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+header .nova {
+    padding: auto;
+    justify-content: left;
+}
+
+header .nova img {
+    justify-content: center;
+    width: 150px;
+    border-radius: 0;
+}
+
+header nav {
+    padding: 50px;
+    width: 100%;
+    justify-content: first baseline;
+    display: flex;
+    height: 40px;
+    gap: 25px;
+}
+
+header .c {
+    background-color: rgba(0, 0, 0, 0.495);
+    border-radius: 30px;
+    justify-content: end;
+    display: flex;
+    gap: 60%;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.3);
+    /* aumenta el tamaño */
+    color: white;
+}
+
+header h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+
+/* Nosotros */
+.nosotros {
+    background-color: rgba(255, 255, 255, 0.673);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* CARDS */
+.cards {
+    background-color: rgba(255, 255, 255, 0.673);
+    padding: 20px;
+    border-radius: 35px;
+    margin-bottom: 30px;
+    height: 660px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+
+.card {
+    overflow: hidden;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.277);
+
+
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.673);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    height: 520px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 10px;
+}
+
+.card p {
+    padding: 0 10px 10px;
+}
+
+.card a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background: linear-gradient(45deg, #a2c9f3, #3A86FF, #0037ff);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.673);
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    height: 70px 70px;
+    width: 90%;
+    padding: 30px;
+    margin: 20px 20px 30px 100px;
+    text-align: center;
+}
+
+.icons {
+    font-size: 25px;
+    text-align: center;
+}
+
+i {
+    color: black;
+}
+
+
+@media (max-width: 580px) {
+
+    header {
+        width: auto;
+        height: 500px;
+    }
+
+    header img {
+        height: 100px;
+    }
+
+    header nav {
+        padding: 15% 0 20% 5%;
+        justify-content: center;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    header .nova {
+        width: 0;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    header nav .c {
+        width: 100%;
+    }
+
+    .c {
+        width: 100%;
+        gap: 0;
+    }
+
+    .nosotros {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .card-container {
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cards {
+        height: auto;
+        padding: 15px;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .card img {
+        height: 90px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 20px;
+        width: 90%;
+        margin: 0px 20px 30px 20px;
+    }
+
+    .icons {
+        font-size: 20px;
+    }
+}

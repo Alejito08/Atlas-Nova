@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #a2c9f3, #3A86FF, #a2c9f3);
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: absolute;
+    left: 0;
+    /* Para poder pasar de lado (cambiar los margin ) */
+    top: 0;
+    width: 70px;
+    height: 30%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.277);
+    backdrop-filter: blur(15px);
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar:hover {
+    height: 45%;
+    width: 220px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    width: 45px;
+    border-radius: 0;
+}
+
+.logo h2 {
+    margin-left: 10px;
+    display: none;
+}
+
+.sidebar:hover .logo h2 {
+    display: block;
+}
+
+li i {
+    color: white;
+}
+
+.links li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.links li:hover {
+    background-color: #a1d0ff;
+}
+
+.links li span {
+    min-width: 40px;
+    text-align: center;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: none;
+}
+
+.sidebar:hover .links li a {
+    display: block;
+}
+
+.links h4 {
+    display: none;
+    margin: 10px;
+}
+
+.sidebar:hover .links h4 {
+    display: block;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.673);
+    border-radius: 40px;
+    width: 90%;
+    padding: 30px;
+    margin: 20px 20px 30px 100px;
+    height: 160px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+header nav {
+    justify-content: right;
+    display: flex;
+    height: 40px;
+    gap: 20px;
+}
+
+nav a {
+    color: black;
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.3);
+    /* aumenta el tamaño */
+    color: white;
+}
+
+header h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+/* Paises */
+.paises-visitados {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.673);
+    border-radius: 40px;
+    width: 90%;
+    padding: 30px;
+    margin: 20px 20px 30px 100px;
+    height: 230px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.paises {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.paises p:hover {
+    height: 100vh;
+}
+
+/* Cards de los paises */
+.francia {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 620px;
+}
+
+.inglaterra {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 605px;
+}
+
+.suiza {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 605px;
+}
+
+.italia {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 605px;
+}
+
+.brasil {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 605px;
+}
+
+/* Botones de paises */
+button {
+    background: linear-gradient(45deg, #a2c9f3, #3A86FF, #0037ff);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* DESTINOS */
+.destinos-container {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.destino-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destino-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.destino-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destino-card h2 {
+    margin: 15px 0 10px;
+    color: #3A86FF;
+}
+
+.destino-card p {
+    padding: 0 15px 15px;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    width: 90%;
+    padding: 30px;
+    margin: 20px 20px 30px 100px;
+}
+
+.icons {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+i {
+    color: black;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+i:hover {
+    transform: scale(1.3);
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    header nav {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    header {
+        padding: 20px;
+        height: 60%;
+    }
+
+    .paises-visitados {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .paises-visitados h1 {
+        font-size: 25px;
+    }
+
+    .paises {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destinos-container {
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+        width: 90%;
+        padding: 30px;
+        margin: 20px 20px 30px 100px;
+    }
+
+    .francia,
+    .inglaterra,
+    .suiza,
+    .italia,
+    .brasil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .destino-card {
+        width: 90%;
+    }
+
+    .destino-card {
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .destino-card img {
+        height: 150px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .icons {
+        font-size: 20px;
+    }
+}

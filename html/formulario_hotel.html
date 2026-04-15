@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Imagen -->
+    <link rel="shortcut icon" href="/imagenes/atlas_nova_logo.png" type="image/x-icon">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/formulario_hotel.css">
+
+    <title>Formulario Hotel | Tu Próximo Destino</title>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="/imagenes/atlas_nova_logo.png" alt="logo">
+            <h2>Atlas Nova</h2>
+        </div>
+
+        <ul class="links">
+            <h4><strong>Viajes que marcan historia</strong></h4>
+            <br>
+            <h4>Planea Tu Viaje</h4>
+
+            <li>
+                <span><i class="fa-solid fa-plane"></i></span>
+                <a href="/html/vuelos.html">Comprar Vuelos</a>
+            </li>
+
+            <li>
+                <span><i class="fa-solid fa-hotel"></i></span>
+                <a href="/html/hotel.html">Reservar Hotel</a>
+            </li>
+
+            <li>
+                <span><i class="fa-solid fa-map-pin"></i></span>
+                <a href="/html/tour.html">Comprar Tours</a>
+            </li>
+
+        </ul>
+    </aside>
+
+    <header>
+        <nav>
+            <a href="/html/index.html">🏠Inicio</a>
+            <a href="/html/destinos.html">🌍Destinos</a>
+            <a href="/html/contacto.html">📩Contacto</a>
+            <a href="/html/ayuda.html">🖐️Ayuda</a>
+        </nav>
+
+        <h1>Destinos Turisticos</h1>
+    </header>
+
+    <section class="hero">
+        <h1>Hoteles de Lujo y Confort</h1>
+        <br>
+        <p>Alojamientos cuidadosamente seleccionados en ubicaciones privilegiadas para hacer de tu viaje una
+            experiencia memorable.</p>
+    </section>
+
+    <div class="formulario-hoteles">
+
+        <section class="formulario">
+            <h2>Formulario de Reserva de Hotel</h2>
+            <hr>
+            <br>
+            <form>
+                <div>
+                    <i class="fa-solid fa-plane-arrival"></i>
+                    <label for="destino-hotel">Destino</label>
+                    <select class="boton-op" id="destino-hotel" name="destino-hotel" required>
+                        <option value="">Seleccione destino</option>
+                        <option value="paris">París, Francia</option>
+                        <option value="costa-azul">Costa Azul, Francia</option>
+                        <option value="loira">Castillos de Loira, Francia</option>
+                        <option value="mont">Mont Saint-Michel, Francia</option>
+                        <option value="londres">Londres, Inglaterra</option>
+                        <option value="stonehenge">Stonehenge, Inglaterra</option>
+                        <option value="bath">Bath, Inglaterra</option>
+                        <option value="oxford">Oxford, Inglaterra</option>
+                        <option value="matterhorn">Matterhorn, Suiza</option>
+                        <option value="lucerna">Lucerna, Suiza</option>
+                        <option value="jungfrau">Jungfrau, Suiza</option>
+                        <option value="ginebra">Ginebra, Suiza</option>
+                        <option value="roma">Roma, Italia</option>
+                        <option value="venecia">Venecia, Italia</option>
+                        <option value="florencia">Florencia, Italia</option>
+                        <option value="milan">Milán, Italia</option>
+                        <option value="rio">Río de Janeiro, Brasil</option>
+                        <option value="sao-paulo">São Paulo, Brasil</option>
+                        <option value="salvador">Salvador, Brasil</option>
+                        <option value="foz">Foz do Iguaçu, Brasil</option>
+                    </select>
+                    <br>
+                </div>
+                <br>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-hotel"></i>
+                        <label for="hotel-seleccionado">Hotel Seleccionado</label>
+                        <input type="text" id="hotel-seleccionado" name="hotel-seleccionado"
+                            placeholder="Nombre del hotel" required>
+                    </div>
+                    <br>
+                    <div>
+                        <i class="fa-regular fa-calendar"></i>
+                        <label for="fecha-entrada">Fecha de Entrada</label>
+                        <input type="date" id="fecha-entrada" name="fecha-entrada" required>
+                    </div>
+                    <br>
+                    <div>
+                        <i class="fa-regular fa-calendar"></i>
+                        <label for="fecha-salida">Fecha de Salida</label>
+                        <input type="date" id="fecha-salida" name="fecha-salida" required>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-bed"></i>
+                        <label for="habitaciones">Número de Habitaciones: </label>
+                        <input type="number" id="habitaciones" name="habitaciones" min="1" value="1" required>
+                    </div>
+                    <br><br>
+                    <div>
+                        <i class="fa-solid fa-user-group"></i>
+                        <label for="huespedes">Número de Huéspedes: </label>
+                        <input type="number" id="huespedes" name="huespedes" min="1" value="2" required>
+                    </div>
+                </div>
+                <br>
+                <h2>Información del usuario</h2>
+                <hr>
+                <div>
+                    <label for="nombre-hotel">Nombre Completo</label>
+                    <input type="text" id="nombre-hotel" name="nombre-hotel" required>
+                </div>
+                <div>
+                    <label for="email-hotel">Correo Electrónico</label>
+                    <input type="email" id="email-hotel" name="email-hotel" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono-hotel">Teléfono</label>
+                    <input type="tel" id="telefono-hotel" name="telefono-hotel" required>
+                </div>
+                <div>
+                    <label for="preferencias">Preferencias Especiales</label>
+                    <textarea id="preferencias" name="preferencias"
+                        placeholder="Cama king size, piso alto, vista específica, etc."></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn">Confirmar Reserva de Hotel</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <div class="icons">
+            <a href="#"><i class="fa-brands fa-instagram fa-bounce"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook fa-bounce"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter fa-bounce"></i></a>
+        </div>
+        <p>© 2026 Tu Próximo Destino</p>
+    </footer>
+
+</body>
+
+</html>
